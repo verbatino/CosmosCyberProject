@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmos - Threat Detector</title>
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- Abstract Background Elements -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <main class="app-container">
+      <header class="app-header">
+        <h1>Cosmos <span>Threat Detector</span></h1>
+        <p>Cyber-to-Physical Analysis powered by AI</p>
+      </header>
+
+      <!-- Upload Section -->
+      <section id="upload-section" class="glass-card">
+        <div class="upload-area" id="drop-zone">
+          <div class="upload-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 16V4M12 4L8 8M12 4L16 8M4 16V17C4 18.6569 5.34315 20 7 20H17C18.6569 20 20 18.6569 20 17V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>Upload Video</h2>
+          <p>Drag and drop your MP4 file here, or click to browse</p>
+          <input type="file" id="file-input" accept="video/mp4, video/webm, video/quicktime" hidden />
+          <button id="browse-btn" class="primary-btn">Select File</button>
+        </div>
+        <div id="file-info" class="file-info hidden">
+          <span id="file-name">filename.mp4</span>
+          <button id="remove-file-btn" class="icon-btn" title="Remove video">✕</button>
+        </div>
+        <button id="analyze-btn" class="action-btn hidden">
+          <span class="btn-text">Analyze Threat</span>
+          <div class="btn-glow"></div>
+        </button>
+      </section>
+
+      <!-- Loading State -->
+      <section id="loading-section" class="glass-card hidden">
+        <div class="loader-container">
+          <div class="orbital-spinner">
+            <div class="orbital-circle"></div>
+            <div class="orbital-circle"></div>
+            <div class="orbital-circle"></div>
+          </div>
+          <h3 class="loading-text">NVIDIA Cosmos is analyzing...</h3>
+          <p class="loading-subtext">Evaluating physical plausibility and threat level</p>
+        </div>
+      </section>
+
+      <!-- Results Section -->
+      <section id="results-section" class="glass-card hidden">
+        <div class="results-header">
+          <h2>Analysis Report</h2>
+          <div id="danger-badge" class="danger-badge">Unknown</div>
+        </div>
+        <div class="markdown-body" id="report-content">
+          <!-- Report content will be injected here -->
+        </div>
+        <button id="reset-btn" class="secondary-btn">Analyze Another Video</button>
+      </section>
+
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

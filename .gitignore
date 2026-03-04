@@ -1,0 +1,57 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Secrets and Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Uploads and Temporary Media
+backend/uploads/*
+!backend/uploads/.gitkeep
+*.mp4
+*.mkv
+*.mov
+*.avi
+logs.txt
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Planning
+planning/
